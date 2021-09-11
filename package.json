@@ -1,6 +1,6 @@
 {
   "name": "binaryclock",
-  "homepage": "https://jmoore34.github.io/cubeclock",
+  "homepage": "https://jmoore34.github.io/binaryclock",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
