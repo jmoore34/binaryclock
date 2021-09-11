@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import styled from 'styled-components';
+import { getDigits, useTime } from './util';
 
 const Grid = styled.div`
   display: grid;
@@ -19,13 +20,41 @@ const Grid = styled.div`
   height: 100vh;
 `;
 
-const Box = styled.div<{area: string}>`
+enum BoxVariant {
+  Date = "purple",
+  Second = "red",
+  Minute = "green",
+  Hour = "blue"
+}
+
+const Box = styled.div<{area: string, variant: BoxVariant, active: boolean | number}>`
   grid-area: ${props => props.area};
+  background-color: ${props => props.variant};
+  opacity: ${props => props.active ? 0.9 : 0.3};
 `;
 
 function App() {
+  const now = useTime();
+
+  const d = now.getDate()
+  var h = now.getHours() % 12;
+  if (h === 0)
+    h = 12;
+  const [mm, m] = getDigits(now.getMinutes());
+  const [ss, s] = getDigits(now.getSeconds());
+
   return (
     <Grid>
+      {[1,2,4,8].map(i => <>
+        <Box variant={BoxVariant.Date} area={`d${i}`} active={d & i} />
+        <Box variant={BoxVariant.Hour} area={`h${i}`} active={h & i} />
+        <Box variant={BoxVariant.Minute} area={`m${i}`} active={m & i} />
+        <Box variant={BoxVariant.Minute} area={`mm${i}`} active={mm & i} />
+        <Box variant={BoxVariant.Second} area={`s${i}`} active={s & i} />
+        <Box variant={BoxVariant.Second} area={`ss${i}`} active={ss & i} />
+      </>)}
+      {/* date also has 16 bit box */}
+      <Box variant={BoxVariant.Date} area="d16" active={d & 16} />
     </Grid>
   );
 }
