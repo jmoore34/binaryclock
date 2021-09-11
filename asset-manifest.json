@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/cubeclock/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/cubeclock/static/js/main.92c71846.chunk.js",
+    "main.js.map": "/cubeclock/static/js/main.92c71846.chunk.js.map",
+    "runtime-main.js": "/cubeclock/static/js/runtime-main.832c6185.js",
+    "runtime-main.js.map": "/cubeclock/static/js/runtime-main.832c6185.js.map",
+    "static/js/2.53ffa58c.chunk.js": "/cubeclock/static/js/2.53ffa58c.chunk.js",
+    "static/js/2.53ffa58c.chunk.js.map": "/cubeclock/static/js/2.53ffa58c.chunk.js.map",
+    "static/js/3.d72826d6.chunk.js": "/cubeclock/static/js/3.d72826d6.chunk.js",
+    "static/js/3.d72826d6.chunk.js.map": "/cubeclock/static/js/3.d72826d6.chunk.js.map",
+    "index.html": "/cubeclock/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/cubeclock/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.53ffa58c.chunk.js.LICENSE.txt": "/cubeclock/static/js/2.53ffa58c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.832c6185.js",
+    "static/js/2.53ffa58c.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.92c71846.chunk.js"
+  ]
+}
