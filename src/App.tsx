@@ -14,10 +14,11 @@ const Grid = styled.div`
     ". h2  mm2 m2 ss2 s2 ."
     ". h1  mm1 m1 ss1 s1 ."
     ". .   .   .  .   .  .";
-  grid-template-columns: 1fr repeat(5, 18vmin) 1fr;
-  grid-template-rows: 1fr repeat(5, 18vmin) 1fr;
+  grid-template-columns: 1fr repeat(5, 17vmin) 1fr;
+  grid-template-rows: 1fr repeat(5, 17vmin) 1fr;
   width: 100vw;
   height: 100vh;
+  grid-gap: 2vmin;
 `;
 
 enum BoxVariant {
